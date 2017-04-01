@@ -1,6 +1,6 @@
 export default {
     getMessage(state){
-        return (state.msg).toUppercase()
+        return (state.msg).toUpperCase()
     },
     getCounter(state){
         return (state.counter)
