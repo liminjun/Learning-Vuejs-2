@@ -1,7 +1,14 @@
 <template>
   <div id="app">
-    <img src="./assets/logo.png">
-    <router-view></router-view>
+  
+    <!--登录页内容放这里-->
+     
+    <router-view></router-view> 
+  <p>hello</p>
+    <router-view name="main"></router-view>
+
+
+
   </div>
 </template>
 

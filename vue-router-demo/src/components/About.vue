@@ -1,12 +1,12 @@
 <template>
-  <div class="hello">
-    <p>左侧sidebar</p>
+  <div class="main">
+    <p>右侧main面板</p>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'hello',
+  name: 'about',
   data () {
     return {
       msg: 'Welcome to Your Vue.js App'
@@ -19,10 +19,10 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-.hello{
+.main{
   background-color:red;
-  width:20%;
-  float:left;
+  width:80%;
+  float:right;
 }
 h1, h2 {
   font-weight: normal;
