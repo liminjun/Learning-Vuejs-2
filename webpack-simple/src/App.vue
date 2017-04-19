@@ -16,40 +16,16 @@
       <li><a href="http://vue-loader.vuejs.org/" target="_blank">vue-loader</a></li>
       <li><a href="https://github.com/vuejs/awesome-vue" target="_blank">awesome-vue</a></li>
     </ul>
-    {{questions}}
-    
   </div>
 </template>
 
 <script>
-
-
 export default {
   name: 'app',
   data () {
     return {
-      questions:[]
+      msg: 'Welcome to Your Vue.js App'
     }
-  },
-  
-  methods:{
-    getQuestions:function(){
-      var vm=this;
-      var resource=this.$resource("http://localhost:3000/questions");
-
-      resource.get()
-      .then(function(response){
-        vm.$set('questions',response.data);
-      })
-      .catch(function(error){
-        console.log(error);
-      });
-      
-    }
-  },
-  //页面document ready之后执行的函数
-  ready() {
-    this.getQuestions();
   }
 }
 </script>

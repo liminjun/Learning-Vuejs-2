@@ -1,40 +1,45 @@
 {
-  "shoppinglists": [
+  "questions": [
     {
-      "title": "Groceries",
+      "title": "1.以下是省会城市的?",
       "items": [
         {
-          "text": "Apples",
+          "text": "A.济南",
           "checked": false
         },
         {
-          "text": "Oranges",
+          "text": "B.南昌",
           "checked": false
         },
         {
-          "text": "Sausages",
+          "text": "C.厦门",
           "checked": true
         }
       ],
-      "id": 10
+      "type": "single"
     },
     {
-      "title": "Clothes",
+      "title": "2.属于一线城市的是?",
       "items": [
         {
-          "text": "Dress",
+          "text": "A.上海",
           "checked": false
         },
         {
-          "text": "All stars",
+          "text": "B.北京",
           "checked": false
         },
         {
-          "text": "Bikini",
+          "text": "C.深圳",
+          "checked": false
+        }
+        ,
+        {
+          "text": "D.广州",
           "checked": false
         }
       ],
-      "id": 12
+      "type": "mutiple"
     }
   ]
 }
