@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Request Server using $.ajax</title>
+    <script src="https://unpkg.com/vue/dist/vue.js"></script>
+    <script src="jquery.min.js"></script>
+</head>
+<body>
+    <div id="app">
+        
+        <form action="">
+            <input type="text" v-model="message" placeholder="消息">
+            <input type="text" v-model="nickname" placeholder="昵称">
+
+            <input type="button" v-on:click="submit" value="提交">
+        </form>
+
+       <ul>
+      
+           <li v-for="item in items">
+               {{item.message}}
+           </li>
+       </ul>
+    </div>
+    <script>
+        var app=new Vue({
+            el:"#app",
+            data:{
+                message:'',
+                nickname:'',
+               items:[]
+            },
+         
+            methods:{
+
+                getMessages:function(){
+                    $.ajax({
+                        url:"http://weddings.duapp.com/api/messages",
+                        dataType:"json",
+                        type:"GEt",
+                        success:function(response){
+                            debugger;
+                            app.items=response;
+                        },
+                        error:function(error){
+                            console.log(error);
+                        }
+                    });
+                },
+                submit:function(){
+                    var id=Date.now();
+                    $.ajax({
+                        url:"http://weddings.duapp.com/api/message/"+id,
+                        dataType:"json",
+                        type:"POST",
+                        data:{
+                            nickname:app.nickname,
+                            message:app.message
+                        },
+                        success:function(response){
+                            alert("添加成功");
+                            //更新列表
+                            app.getMessages();
+                        },
+                        error:function(error){
+                            console.log(error);
+                        }
+                    });
+                }
+            }
+        });
+
+        app.getMessages();
+    </script>
+</body>
+</html>

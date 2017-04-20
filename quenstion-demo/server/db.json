@@ -5,17 +5,37 @@
       "items": [
         {
           "text": "A.济南",
-          "checked": false
+          "value": "A"
         },
         {
           "text": "B.南昌",
-          "checked": false
+          "value": "B"
         },
         {
           "text": "C.厦门",
-          "checked": true
+          "value": "C"
         }
       ],
+      "selected":"",
+      "type": "single"
+    },
+    {
+      "title": "3.我的名字是?",
+      "items": [
+        {
+          "text": "A.大猩猩",
+          "value": "A"
+        },
+        {
+          "text": "B.星星",
+          "value": "B"
+        },
+        {
+          "text": "C.王星",
+          "value": "C"
+        }
+      ],
+      "selected":"",
       "type": "single"
     },
     {
@@ -23,22 +43,23 @@
       "items": [
         {
           "text": "A.上海",
-          "checked": false
+          "value": "A"
         },
         {
           "text": "B.北京",
-          "checked": false
+          "value": "B"
         },
         {
           "text": "C.深圳",
-          "checked": false
+          "value": "C"
         }
         ,
         {
           "text": "D.广州",
-          "checked": false
+          "value": "D"
         }
       ],
+      "selected":[],
       "type": "mutiple"
     }
   ]
