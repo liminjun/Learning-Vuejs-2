@@ -16,11 +16,15 @@ const getters = {
 // actions
 const actions = {
   checkout ({ commit, state }, products) {
+    //当前的购物车物品暂存一下
     const savedCartItems = [...state.added]
     commit(types.CHECKOUT_REQUEST)
+
     shop.buyProducts(
       products,
+      //成功操作
       () => commit(types.CHECKOUT_SUCCESS),
+      //失败操作
       () => commit(types.CHECKOUT_FAILURE, { savedCartItems })
     )
   }

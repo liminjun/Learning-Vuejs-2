@@ -16,11 +16,15 @@
 <script>
 import { mapGetters } from 'vuex'
 
+import {mapActions} from 'vuex'
+
 export default {
   computed: {
+    
     //使用对象展开运算符将 getters 混入 computed 对象中
     ...mapGetters({
       products: 'cartProducts',
+      //映射 this.checkoutStatus为store.getters.checkoutStatus
       checkoutStatus: 'checkoutStatus'
     }),
     total () {
@@ -31,6 +35,7 @@ export default {
   },
   methods: {
     checkout (products) {
+      //使用this.$store.dispatch('xxx')分发action
       this.$store.dispatch('checkout', products)
     }
   }
