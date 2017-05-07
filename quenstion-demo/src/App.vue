@@ -11,9 +11,11 @@
             <ul>
                 <li v-for="item in question.items">
                     
-                    <input  type="radio"  v-bind="{name:'question_'+index,'value':item.value}"  v-if="question.type=='single'">
+                  
+                
+                    <input  type="radio"  :value="item.value"  v-if="question.type=='single'" v-model="question.selected">
 
-                     <input  type="checkbox" v-bind="{name:'question_'+index,'value':item.value}" v-if="question.type=='mutiple'">
+                     <input  type="checkbox"  :value="item.value" v-if="question.type=='mutiple'" v-model="question.selected">
                     {{item.text}}
                 </li>
             </ul>
@@ -33,13 +35,15 @@ export default {
     return {
       questions:null
     }
+    
   },
   created:function(){
     this.getQuestions();//获取数据
   },
   methods:{
     submitform:function(){
-
+      debugger;
+      console.log(this.questions);
     },
     getQuestions:function(){
       var vm=this;

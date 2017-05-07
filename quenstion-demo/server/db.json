@@ -16,26 +16,7 @@
           "value": "C"
         }
       ],
-      "selected":"",
-      "type": "single"
-    },
-    {
-      "title": "3.我的名字是?",
-      "items": [
-        {
-          "text": "A.大猩猩",
-          "value": "A"
-        },
-        {
-          "text": "B.星星",
-          "value": "B"
-        },
-        {
-          "text": "C.王星",
-          "value": "C"
-        }
-      ],
-      "selected":"",
+      "selected":null,
       "type": "single"
     },
     {
